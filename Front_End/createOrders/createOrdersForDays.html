@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Պատվերների էջ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Պատվեր՝</h1>
+    <h1 id="pageTitle">անհայտ հաճախորդ</h1>
+    <button onclick="backPage()">ՀԵՏ</button>
+
+    <!-- Պատվերների կոճակներ -->
+    <div class="buttons-container" style="display: none;">
+        <button data-option="today" onclick="createOrder('today')">Այսօր</button>
+        <button data-option="tomorrow" onclick="createOrder('tomorrow')">Վաղվը</button>
+        <button data-option="else" onclick="createOrder('else')">Այլ ամսաթվ</button>
+    </div>
+
+    <!-- Պատվերի նկարագրություն -->
+    <div id="order-description-container" style="display: none;">
+        <label for="order_description">Պատվերի նկարագրություն:</label>
+        <input type="text" id="order_description" name="order_description" placeholder="Մուտքագրեք նկարագրությունը">
+        <button id="make_order" onclick="submitOrder()">Ստեղծել պատվեր</button>
+    </div>
+
+    <!-- Ամսաթվի և ժամանակի ընտրության մոդալ -->
+    <div id="dateTimePickerModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Ընտրել ամսաթվ ու ժամանակ</h2>
+            <label for="datePicker">Ամսաթուքը:</label>
+            <input type="date" id="datePicker"><br><br>
+            <label for="timePicker">Ժամանակը:</label>
+            <input type="time" id="timePicker"><br><br>
+            <button onclick="confirmDateTime()">Հաստատել</button>
+            <button onclick="closeModal()">Չեղարկել</button>
+        </div>
+    </div>
+    
+    <!-- Հաճախորդի ընտրության մոդալ -->
+    <div id="clientChoiceModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <button onclick="backPage()">ՀԵՏ</button>
+            <h2>Ընտրեք գործողություն</h2>
+            <p>Ցանկանում եք փնտրել հաճախորդ, թե ստեղծել նոր հաճախորդ:</p>
+            <button onclick="redirectToSearchPage()">Փնտրել հաճախորդ</button>
+            <button onclick="redirectToCreateClientPage()">Ստեղծել հաճախորդ</button>
+        </div>
+    </div>
+
+    <!-- Հաճախորդի կոնտակտային տվյալներ -->
+    <div id="clientContactContainer" style="display: none;">
+        <h3>Հաճախորդի կոնտակտային տվյալներ</h3>
+        
+        <!-- Հեռախոսահամարների ընտրացանկ -->
+        <label for="phoneNumbers">Հեռախոսահամարներ:</label>
+        <select id="phoneNumbers">
+        
+            <!-- Ընտրանքներ կավելացվեն դինամիկորեն -->
+        </select>
+        <button onclick="addPhoneNumber()">Ավելացնել հեռախոսահամար</button>
+
+        <!-- Հասցեների ընտրացանկ -->
+        <label for="addresses">Հասցեներ:</label>
+        <select id="addresses">
+        
+            <!-- Ընտրանքներ կավելացվեն դինամիկորեն -->
+        </select>
+        <button onclick="addAddress()">Ավելացնել հասցե</button>
+
+        <!-- Նոր հեռախոսահամար ավելացնելու ձև -->
+        <div id="newPhoneNumberContainer" style="display: none;">
+            <label for="newPhoneNumber">Նոր հեռախոսահամար:</label>
+            <input type="text" id="newPhoneNumber" placeholder="Մուտքագրեք նոր հեռախոսահամար">
+            <button onclick="submitPhoneNumber()">Ավարտել հեռախոսահամարի մուտքագրումը</button>
+        </div>
+
+        <!-- Նոր հասցե ավելացնելու ձև -->
+        <div id="newAddressContainer" style="display: none;">
+            <label for="newAddress">Նոր հասցե:</label>
+            <input type="text" id="newAddress" placeholder="Մուտքագրեք նոր հասցե">
+            <button onclick="submitAddress()">Ավարտել հասցեի մուտքագրումը</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

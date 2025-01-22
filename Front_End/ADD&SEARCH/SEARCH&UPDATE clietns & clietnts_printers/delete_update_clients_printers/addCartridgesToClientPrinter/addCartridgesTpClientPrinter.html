@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cartridge Management</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+        <button type="button" id="back_page">BACK</button>
+            <h1>ADD CARTRIDG FOR PRINTER</h1>
+            <h1 id="pageTitle">CLIENT PRINTERS</h1>
+            
+            <form id="cartridgeManagementForm">
+                <!-- Cartridge Selection -->
+                <div>
+                    <label for="cartridge">Select Cartridge:</label>
+                    <select id="cartridge" required>
+                        <option value="">Select Cartridge</option>
+                        <option value="-1" id="addNewCartridgeOption">Add_New_Cartridge</option>
+                    </select>
+                    <button type="button" id="addCartridgeButton">Add to List</button>
+                </div>
+
+                <!-- Add New Cartridge Section -->
+                <div id="addNewCartridgeSection" style="display: none;">
+                    <label for="newCartridgeName">Add New Cartridge:</label>
+                    <input type="text" id="newCartridgeName" placeholder="Enter new cartridge name">
+                    <button type="button" id="addNewCartridgeButton">Add New Cartridge</button>
+                </div>
+
+                <!-- Chips Section -->
+                <div>
+                    <label for="chip">CHIPS:</label>
+                    <select id="chip">
+                        <option value="">CHIPS</option>
+                        <option value="-1" id="addNewChipOption">Add_New_CHIP</option>
+                    </select>
+                </div>
+
+                <!-- Add New CHIP Section -->
+                <div id="addNewChipSection" style="display: none;">
+                    <label for="addChip_model">Chip Model:</label>
+                    <input type="text" id="addChip_model" placeholder="Enter Chip Model">
+                    <button type="button" id="addNewChipButton">Add New CHIP</button>
+                </div>
+
+                <!-- Selected Cartridges Display Section -->
+                <div id="selectedCartridges">
+                    <p id="selectedCartridgesLabel">Selected Cartridges:</p>
+                    <ul id="cartridgeList" aria-labelledby="selectedCartridgesLabel"></ul>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Associate_To_Printer</button>
+            </form>
+
+            <!-- Response Message -->
+            <p id="responseMessage" aria-live="polite"></p>
+        </div>
+        <script src="script.js?v=${new Date().getTime()}" defer></script>
+    </body>
+</html>

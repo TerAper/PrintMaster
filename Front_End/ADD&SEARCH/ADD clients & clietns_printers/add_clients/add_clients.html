@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <button type="button" id="back_page">ՀԵՏ</button>
+        <h1>Հաճախորդի տեղեկատվություն</h1>
+        <form id="clientForm">
+            <label for="name">Հաճախորդի անունը:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="llc">ՀՎՀ:</label>
+            <input type="text" id="llc" name="llc" required>
+
+            <label for="client_type">Հաճախորդի տեսակ:</label>
+            <select id="client_type" name="client_type">
+                <option value="individual" selected>Անհատ</option>
+                <option value="organization">Կազմակերպություն</option>
+            </select>
+            
+            <!-- Dynamically Add Phone Numbers -->
+            <div id="phoneContainer">
+                <label for="phone">Հաճախորդի հեռախոսահամար:</label>
+                <input type="text" class="phone" name="phone[]" required>
+                <button type="button" id="addPhoneButton">Ավելացնել հեռախոսահամար</button>
+            </div>
+
+            <!-- Dynamically Add Addresses -->
+            <div id="addressContainer">
+                <label for="address">Հաճախորդի հասցե:</label>
+                <input type="text" class="address" name="address[]" required>
+                <button type="button" id="addAddressButton">Ավելացնել հասցե</button>
+            </div>
+            <div id="buttonContainer">
+                <button id="saveButton">Պահպանել</button>
+            </div>
+        </form>
+
+    <script src="script.js?v=${new Date().getTime()}" defer></script>
+</body>
+</html>

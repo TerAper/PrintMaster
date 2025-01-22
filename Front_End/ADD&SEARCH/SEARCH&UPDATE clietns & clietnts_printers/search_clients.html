@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Հաճախորդների որոնում</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <button type="button" id="back_page">ՀԵՏ</button>
+        <h1>Հաճախորդների որոնում</h1>
+        <form id="searchForm">
+            <label for="name">Հաճախորդի անունը:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="address">Հաճախորդի հասցեն:</label>
+            <input type="text" id="address" name="address">
+
+            <label for="llc">Հաճախորդի ՀՎՀՀ:</label>
+            <input type="text" id="llc" name="llc">
+
+            <label for="phone">Հաճախորդի հեռախոսահամարը:</label>
+            <input type="text" id="phone" name="phone">
+
+            <select id="clientType" name="clientType">
+                <option value="">Ընտրեք տեսակը</option>
+                <option value="organization">Կազմակերպություն</option>
+                <option value="individual">Անհատ</option>
+            </select>
+        </form>
+        <button type="button" id="searchButton">Որոնում</button>
+    <script src="script.js"></script>
+</body>
+</html>

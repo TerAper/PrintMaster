@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Վերանորոգման Էջ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Վերանորոգման Գնացուցակ</h1>
+    <button id="back-button" onclick="backPage()">ՀԵՏ</button>
+  </header>
+
+  <main>
+    <section id="category-section">
+      <label for="category">Ընտրեք կատեգորիա՝</label>
+      <select id="category" onchange="fetchRepairingParts()">
+        <option value="cartridge">Քարթրիջ</option>
+        <option value="printer">Տպիչ</option>
+        <option value="other">Այլ</option>
+      </select>
+    </section>
+
+    <section id="repairing-items-container" style="display: none;">
+      <h2>Վերանորոգվող Նյութեր</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Վերանորոգվող Մաս</th>
+              <th>Գին</th>
+              <th>Ծախս</th>
+              <th>Քանակ</th>
+            </tr>
+          </thead>
+          <tbody id="repairing-items"></tbody>
+        </table>
+      </div>
+
+      <button id="add-new-repair" onclick="addNewRepairRow()">Ավելացնել Նոր Վերանորոգման Տվյալներ</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Վերանորոգման Ծառայություններ</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

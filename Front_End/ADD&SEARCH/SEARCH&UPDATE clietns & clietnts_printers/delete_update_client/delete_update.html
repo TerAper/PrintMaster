@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Խմբագրել կամ Ջնջել Հաճախորդին</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <button type="button" id="back_page">ՀԵՏ</button>
+        <h1>Խմբագրել կամ Ջնջել Հաճախորդին</h1>
+        <form id="clientForm">
+            <div class="form-group">
+                <label for="name">Անուն:</label>
+                <input type="text" id="name" disabled>
+            </div>
+            <div class="form-group">
+                <label for="llc">ՀՎՀՀ:</label>
+                <input type="text" id="llc" disabled>
+            </div>
+            <div class="form-group">
+                <label for="client_type">ՀԱՃԱԽՈՐԴԻ ՏԵՍԱԿԸ:</label>
+                <select id="client_type" disabled>
+                    <option value="organization">Կազմակերպություն</option>
+                    <option value="individual">Անհատ</option>
+                </select>
+            </div>
+
+            <!-- Հեռախոսահամարների Բաժին -->
+            <div class="form-group">
+                <label>Հեռախոսահամարներ:</label>
+                <table id="phoneNumbersTable">
+                    <!-- Հեռախոսահամարները կհայտնվեն այստեղ -->
+                </table>
+            </div>
+
+            <!-- Հասցեների Բաժին -->
+            <div class="form-group">
+                <label>Հասցեներ:</label>
+                <table id="addressesTable">
+                    <!-- Հասցեները կհայտնվեն այստեղ -->
+                </table>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" id="editButton">Փոփոխել</button>
+                <button type="button" id="saveButton" style="display:none;">Պահպանել</button>
+                <button type="button" id="deleteButton">Ջնջել Հաճախորդին</button>
+                <button type="button" id="printersButton">Տպիչներ</button> <!-- Տպիչների կոճակ -->
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

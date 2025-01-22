@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Վերանորոգման Էջ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button onclick="backPage()">ՀԵՏ</button>
+  <div>
+    <label for="printer">ՏՊԱԳՐԻՉ:</label>
+    <select id="printer">
+        <!-- Տպագրիչի տարբերակները կլրացվեն այստեղ -->
+    </select>
+  </div>
+  <!-- Քարթրիջների Ընտրության Բաժին -->
+  <div>
+    <label for="cartridge">ՔԱՐԹՐԻՋՆԵՐ:</label>
+    <select id="cartridge">
+      <!-- Քարթրիջների տարբերակները կլրացվեն այստեղ -->
+    </select>
+  </div>
+  <button type="button" id="updatePrintersButton">Թարմացնել Տպիչները</button>
+
+  <h1>Վերանորոգում</h1>
+  <label for="category">Ընտրեք Կատեգորիա:</label>
+  <select id="category" onchange="fetchRepairingParts()">
+      <option value="cartridge">Քարթրիջ</option>
+      <option value="printer">Տպագրիչ</option>
+      <option value="other">Այլ</option>
+  </select>
+  
+  <div id="repairing-items-container" style="display: none;">
+    <h2>Վերանորոգման Պարագաներ</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Վերանորոգման Պարագա</th>
+          <th>Գին</th>
+          <th>Ծախ</th>
+          <th>Քանակ</th>
+        </tr>
+      </thead>
+      <tbody id="repairing-items"></tbody>
+    </table>
+    <h3>Ընդհանուր Գին: ԴՐԱՄ <span id="total-price">0.00</span></h3>
+    <h3>Ընդհանուր Ծախս: ԴՐԱՄ <span id="total-spend">0.00</span></h3>
+    <button onclick="saveSelectedRepairs()">Պահպանել Վերանորոգումները</button>
+    <button onclick="addNewRepairRow()">Ավելացնել Նոր Վերանորոգման Տվյալներ</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+/* General Reset */
+body, h1, p, label, input, select, button, div, form, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body and Container Styles */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 10px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #007BFF;
+}
+
+/* Labels and Input Fields */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Buttons */
+button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #003d80;
+}
+
+button[type="submit"] {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #28a745;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Selected Cartridges Display */
+#selectedCartridges {
+    margin-top: 20px;
+}
+
+#cartridgeList {
+    list-style: none;
+    padding-left: 0;
+    margin: 10px 0;
+}
+
+#cartridgeList li {
+    padding: 8px 10px;
+    margin-bottom: 5px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Add New Sections */
+#addNewCartridgeSection, #addNewChipSection {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#addNewCartridgeSection label, #addNewChipSection label {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    label, input, select, button {
+        font-size: 0.9rem;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    button[type="submit"] {
+        font-size: 1rem;
+    }
+
+    #cartridgeList li {
+        font-size: 0.85rem;
+    }
+}

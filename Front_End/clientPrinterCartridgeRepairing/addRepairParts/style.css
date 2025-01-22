@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: #4CAF50;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #fff;
+    color: #4CAF50;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  header button:hover {
+    background-color: #ddd;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  select {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 0.5rem;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Totals Section */
+  .totals {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+  }
+  
+  .totals h3 {
+    margin: 0.5rem 0;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background: #4CAF50;
+    color: #fff;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    body {
+      font-size: 1rem;
+    }
+  
+    header button {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+  
+    label, select {
+      width: 100%;
+      display: block;
+      margin-bottom: 1rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+      padding: 0.5rem;
+    }
+  
+    .table-container {
+      margin-bottom: 1rem;
+    }
+  
+    table, th, td {
+      font-size: 0.9rem;
+    }
+  
+    .totals h3 {
+      font-size: 1rem;
+    }
+  }
+  

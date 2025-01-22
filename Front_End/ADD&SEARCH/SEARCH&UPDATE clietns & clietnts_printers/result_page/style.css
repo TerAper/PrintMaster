@@ -1,0 +1,118 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Start content from the top */
+    align-items: center;
+    height: 200vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent extra scrolling */
+}
+
+/* Table container styling */
+.table-container {
+    width: 50%; /* Take full width */
+    max-width: 1200px;
+    height: 60%; /* Occupy a percentage of screen height */
+    overflow-y: auto; /* Enables vertical scrolling */
+    border: 1px solid #ccc; /* Optional border for visualization */
+    background: white; /* Background for the table container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better aesthetics */
+    margin-bottom: 20px; /* Add spacing between containers */
+}
+
+/* Client details container */
+.client-details-container {
+    width: 100%; /* Take full width */
+    max-width: 800px;
+    height: 30%; /* Occupy a percentage of screen height */
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better aesthetics */
+    overflow-y: auto; /* Allow scrolling for content */
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    width: 100%; /* Ensure header spans full width */
+    background-color: #4CAF50; /* Highlight header */
+    color: white;
+    padding: 10px 0;
+    margin: 0; /* Remove margin for consistency */
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px; /* Adjust padding for readability */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px; /* Adjust font size */
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Input focus styling */
+input:focus {
+    border-color: #4CAF50;
+}
+
+/* Client details styling */
+.client-details-container p {
+    font-size: 16px; /* Adjust font size for better readability */
+    margin: 10px 0;
+}
+
+.client-details-container strong {
+    color: #333;
+}
+
+/* Responsive Design - Mobile Styling */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Adjust layout for small screens */
+    }
+
+    h1 {
+        font-size: 20px; /* Adjust heading size for small screens */
+    }
+
+    .table-container,
+    .client-details-container {
+        width: 100%; /* Take full width on mobile */
+        height: auto; /* Allow containers to adjust height */
+        padding: 15px; /* Adjust padding */
+    }
+
+    th, td {
+        font-size: 12px; /* Smaller font size for mobile */
+        padding: 6px; /* Reduce padding */
+    }
+
+    .table-container {
+        max-height: 50%; /* Limit table height on smaller screens */
+    }
+
+    .client-details-container p {
+        font-size: 14px; /* Adjust font size for paragraphs */
+    }
+}

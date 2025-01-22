@@ -1,0 +1,131 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Date Picker Container */
+#customDateContainer {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+input[type="date"] {
+    padding: 5px;
+    font-size: 14px;
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+}
+
+/* Table Styling */
+#ordersTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#ordersTable th,
+#ordersTable td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#ordersTable th {
+    background-color: #007BFF;
+    color: white;
+}
+
+#ordersTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+        margin: 3px;
+    }
+
+    #ordersTable th,
+    #ordersTable td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    #ordersTable {
+        font-size: 14px;
+    }
+
+    #customDateContainer {
+        padding: 5px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    input[type="date"] {
+        font-size: 12px;
+    }
+}
+
+/* For Smaller Devices */
+@media screen and (max-width: 480px) {
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #ordersTable th,
+    #ordersTable td {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    label {
+        font-size: 10px;
+    }
+
+    input[type="date"] {
+        font-size: 10px;
+    }
+
+    #ordersTable {
+        font-size: 12px;
+    }
+}

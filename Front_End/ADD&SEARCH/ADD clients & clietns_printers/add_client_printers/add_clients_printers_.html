@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Printer Management</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <button type="button" id="back_page">ՀԵՏ</button>
+            <button type="button" id="make_order">Ստեղծել Այց</button>
+        <h1>Ավելացնել Տպիչներ Հաճախորդին</h1>
+        <h1 id="pageTitle">անհայտ հաճախորդ</h1>
+
+        <form id="associatePrinterForm">
+            <!-- Brand Selection Section -->
+            <div>
+                <label for="brand">Ընտրել Բրենդը:</label>
+                <select id="brand" required>
+                    <option value="">Ընտրել Բրենդ</option>
+                    <option value="-1" id="addNewBrandOption">Ավելացնել Նոր Բրենդ</option>
+                </select>
+                
+            </div>
+
+            <div id="printTypeSection" class="hidden">
+                <label for="print_type">Տպման Տեսակը:</label>
+                <select id="print_type" >
+                    <option value="">Ընտրել Տպման Տեսակը</option>
+                    <option value="laser">Լազերային</option>
+                    <option value="ink">Թանաքային</option>
+                </select>
+            </div>
+
+            <div id="colorTypeSection" class="hidden">
+                <label for="color_type">Գույնի Տեսակը:</label>
+                <select id="color_type" >
+                    <option value="">Ընտրել Գույնի Տեսակը</option>
+                    <option value="color">Գունավոր</option>
+                    <option value="black/white">Սև/Սպիտակ</option>
+                </select>
+            </div>
+            
+            <!-- Model Selection Section -->
+            <div>
+                <label for="model">Ընտրել Մոդելը:</label>
+                <select id="model" required>
+                    <option value="">Ընտրել Մոդելը</option>
+                    <option value="-1" id="addNewModelOption">Ավելացնել Նոր Մոդել</option>
+                </select>
+                <button type="button" id="modelImage">Մոդելի Նկար</button>
+            </div>
+            
+            <!-- Cartridge Selection  -->
+            <div>
+                <label for="cartridge">Ընտրել Քարտրիջը:</label>
+                <select id="cartridge" required>
+                    <option value="">Ընտրել Քարտրիջը</option>
+                    <option value="-1" id="addNewCartridgeOption">Ավելացնել Նոր Քարտրիջ</option>
+                </select>
+                <button type="button" id="addCartridgeButton">Կցել Քարտրիջը</button>
+                <label for="chip">->:</label>
+                <select id="chip" >
+                    <option value="">Չիպ</option>
+                    <option value="-1" id="addNewChipOption">Ավելացնել Նոր Չիպ</option>
+                </select>
+                <button type="button" id="cartridgeImage">Քարտրիջի Նկար</button>
+            </div>
+            
+            <!-- Add New Cartridge Section -->
+            <div id="addNewCartridgeSection" style="display: none;">
+                <label for="newCartridgeName">Ավելացնել Նոր Քարտրիջ:</label>
+                <input type="text" id="newCartridgeName" placeholder="Մուտքագրեք նոր Քարտրիջի անունը">
+                <button type="button" id="addNewCartridgeButton">Ավելացնել Նոր Քարտրիջ</button>
+            </div>
+            
+            <!-- Add New CHIP Section -->
+            <div id="addNewChipSection" style="display: none;">
+                <label for="addChip_model">Չիպի Մոդելը:</label>
+                <input type="text" id="addChip_model" placeholder="Մուտքագրեք Չիպի Մոդելը">
+                <button type="button" id="addNewChipButton">Ավելացնել Նոր Չիպ</button>
+            </div>
+            
+            <!-- Printer Description -->
+            <div>
+                <label for="printer_description">Տպիչի Նկարագրություն:</label>
+                <input type="text" id="printer_description" name="printer_description" placeholder="Մուտքագրեք նկարագրությունը">
+            </div>
+            
+            <!-- Selected Cartridges Display Section -->
+            <div id="selectedCartridges">
+                <label>Ընտրված Քարտրիջները:</label>
+                <ul id="cartridgeList"></ul>
+            </div>
+            
+            <button type="submit">Միավորել Տպիչը</button>
+        </form>
+        
+        <!-- Manual Add Model Form (for new model) -->
+        <div id="manualAddModelForm" class="hidden">
+            <h2>Ավելացնել Նոր Մոդել</h2>
+            <form id="addModelForm">
+                <div>
+                    <label for="newModelName">Մոդելի Անունը:</label>
+                    <input type="text" id="newModelName" placeholder="Մուտքագրեք մոդելի անունը" required>
+                </div>
+                <div>
+                    <label for="newPrintType">Տպման Տեսակը:</label>
+                    <select id="newPrintType" >
+                        <option value="">Ընտրել Տպման Տեսակը</option>
+                        <option value="laser">Լազերային</option>
+                        <option value="ink">Թանաքային</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="newColorType">Գույնի Տեսակը:</label>
+                    <select id="newColorType" >
+                        <option value="">Ընտրել Գույնի Տեսակը</option>
+                        <option value="color">Գունավոր</option>
+                        <option value="black/white">Սև/Սպիտակ</option>
+                    </select>
+                </div>
+                <button type="submit">Պահպանել Մոդելը</button>
+                <button type="button" id="cancelModelAdd">Չեղարկել</button>
+            </form>
+        </div>
+
+
+        <p id="responseMessage"></p>
+    </div>
+    <script src="script.js?v=${new Date().getTime()}" defer></script>
+</body>
+</html>

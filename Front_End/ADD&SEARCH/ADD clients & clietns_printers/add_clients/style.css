@@ -1,0 +1,158 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Form Container Styling */
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333333;
+}
+
+/* Form Labels */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555555;
+}
+
+/* Input Fields */
+input[type="text"], select {
+    width: calc(100% - 12px);
+    padding: 8px;
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Buttons Styling */
+button {
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Back Button */
+#back_page {
+    background-color: #6c757d;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+#back_page:hover {
+    background-color: #5a6268;
+}
+
+/* Save Button */
+#addPrinterButton {
+    background-color: #007bff;
+    color: white;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#addPrinterButton:hover {
+    background-color: #0056b3;
+}
+#makeOrderButton {
+    background-color: #58051b;
+    color: white;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#makeOrderButton:hover {
+    background-color: #0056b3;
+}
+
+#saveButton {
+    background-color: #007bff;
+    color: white;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#saveButton:hover {
+    background-color: #0056b3;
+}
+
+
+/* Add and Delete Buttons */
+.add-button, .delete-button {
+    background-color: #28a745;
+    color: white;
+    margin-left: 10px;
+}
+
+.add-button:hover, .delete-button:hover {
+    background-color: #218838;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    margin-left: 10px;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Phone and Address Container Styling */
+#phoneContainer, #addressContainer {
+    margin-bottom: 20px;
+}
+
+/* Horizontal Alignment for Entries */
+.phone-entry, .address-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Add Another Buttons Alignment */
+#addPhoneButton, #addAddressButton {
+    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    align-self: center;  /* Center buttons vertically next to inputs */
+}
+
+#addPhoneButton:hover, #addAddressButton:hover {
+    background-color: #0056b3;
+}
+
+/* Align buttons next to input fields */
+#phoneContainer input, #addressContainer input {
+    width: calc(100% - 130px); /* Adjust width to leave space for the button */
+    display: inline-block;
+}
+
+#phoneContainer button, #addressContainer button {
+    display: inline-block;
+    margin-left: 10px; /* Add margin between input field and button */
+}

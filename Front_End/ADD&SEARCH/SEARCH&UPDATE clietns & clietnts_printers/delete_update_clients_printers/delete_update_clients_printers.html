@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=no">
+    <title>Տպիչների Կառավարում</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button type="button" id="back_page">ՀԵՏ</button>
+        <h1 id="pageTitle">ՀԱՃԱԽՈՐԴԻ ՏՊԻՉՆԵՐ</h1>
+        <h1>ՏՊԻՉՆԵՐ</h1>
+
+        <!-- Տպիչի Նկարագրության Բաժին -->
+        <div>
+            <label for="printer_description">Տպիչի նկարագրություն:</label>
+            <input type="text" id="printer_description" name="printer_description" placeholder="Մուտքագրեք տպիչի նկարագրությունը">
+        </div>
+
+        <div>
+            <label for="printer">ՏՊԻՉ:</label>
+            <select id="printer">
+                <!-- Տպիչի ընտրանքները կհայտնվեն այստեղ -->
+            </select>
+            <button type="button" id="addPrinter">Ավելացնել տպիչ</button>
+            <button type="button" id="deletePrinterButton">Ջնջել տպիչ</button>
+            <button type="button" id="printerImage">Տպիչի Նկար</button>
+        </div>
+
+        <!-- Տպիչի Տեղեկությունների Ձև -->
+        <form id="aboutPrinter">
+            <div id="printTypeSection">
+                <label for="print_type">Տպման Տեսակ:</label>
+                <span id="print_type_info" class="info-label"></span>
+            </div>
+            
+            <div id="colorTypeSection">
+                <label for="color_type">Գույնի Տեսակ:</label>
+                <span id="color_type_info" class="info-label"></span>
+            </div>
+        </form>
+
+        <!-- Քարթրիջի Նկարագրության Բաժին -->
+        <div>
+            <label for="cartridge_description">Քարթրիջի նկարագրություն:</label>
+            <input type="text" id="cartridge_description" name="cartridge_description" placeholder="Մուտքագրեք քարթրիջի նկարագրությունը">
+        </div>
+
+        <!-- Քարթրիջի Ընտրության Բաժին -->
+        <div>
+            <label for="cartridge">ՔԱՐԹՐԻՋՆԵՐ:</label>
+            <select id="cartridge">
+                <!-- Քարթրիջի ընտրանքները կհայտնվեն այստեղ -->
+            </select>
+            <button type="button" id="addCartridge">Ավելացնել քարթրիջ</button>
+            <button type="button" id="deleteCartridgeButton">Ջնջել քարթրիջ</button>
+            <button type="button" id="cartridgeImage">Քարթրիջի Նկար</button>
+        </div>
+
+        <!-- Չիպերի Ընտրության Բաժին -->
+        <div>
+            <label for="chip">ՉԻՊԵՐ:</label>
+            <select id="chip">
+                <!-- Չիպերի ընտրանքները կհայտնվեն այստեղ -->
+            </select>
+        </div>
+
+        <p id="responseMessage"></p>
+    </div>
+
+    <script src="script.js?v=${new Date().getTime()}" defer></script>
+</body>
+</html>
