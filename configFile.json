@@ -1,0 +1,9 @@
+{
+    "dataBaseHost" : "localhost",
+    "dataBasePort" : "3306",
+    "mysqlUserName": "APER",
+    "mysqlUserPassword" : "181629",
+    "dataBaseName" : "PrintMaster",
+    "serverPort"   : 9193,
+    "poolSize"     : 10
+}
